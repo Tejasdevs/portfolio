@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejas Chamola | Software Engineering Student</title>
+    <meta name="description" content="Tejas Chamola - Aspiring Software Engineer focused on AI, backend development, and scalable applications.">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+
+<!-- LOADER -->
+<div id="loader" class="loader">
+    <span class="loader-text">Tejas Chamola</span>
+</div>
+
+<!-- SCROLL PROGRESS BAR -->
+<div id="scroll-progress"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+    <a href="#" class="nav-logo">Tejas <span>Chamola</span></a>
+    <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#brands">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">☀️</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-eyebrow">
+            <span class="dot"></span>
+            Open to Opportunities
+        </div>
+        <h1>Turning ideas<br>into <span class="highlight" id="dynamic-word">intelligent</span><br>digital solutions</h1>
+        <p class="hero-description">
+            Aspiring Software Engineer focused on AI, backend development, and scalable applications. 
+            I enjoy building impactful products, solving complex problems, and continuously learning emerging technologies.
+        </p>
+        <div class="hero-actions">
+            <a href="resume.pdf" class="btn-primary" download>Resume ↓</a>
+            <a href="#contact" class="btn-secondary">Get in Touch →</a>
+            <a href="#about" class="btn-secondary">About Me</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>10+</h3>
+                <p>Projects Built</p>
+            </div>
+            <div class="stat">
+                <h3>5+</h3>
+                <p>Technologies Explored</p>
+            </div>
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Continuous Learning</p>
+            </div>
+        </div>
+        <!-- GITHUB GRAPH BOTTOM -->
+        <div class="github-graph-strip">
+            <div class="github-graph-label">📊 GitHub Activity · <span>@Tejasdevs</span></div>
+            <img
+                src="https://ghchart.rshah.org/7c3aed/Tejasdevs"
+                alt="Tejas Chamola GitHub Contribution Graph"
+                loading="lazy"
+            />
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="section-header">
+        <div>
+            <p class="section-label">Who I Am</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-headline">Web Developer &amp; AI Enthusiast passionate about building modern, scalable, and impactful digital solutions.</p>
+        </div>
+    </div>
+    <div class="about-grid">
+        <div class="about-text reveal">
+            <p>
+                Hi, I'm <strong>Tejas</strong>, a Computer Science Engineering student focused on Web Development and Artificial Intelligence. I enjoy transforming ideas into real-world applications through clean code, intuitive user experiences, and innovative technology.
+            </p>
+            <p>
+                My expertise includes Python, JavaScript, FastAPI, SQL, and modern web technologies. I am constantly learning, building projects, and exploring AI-driven solutions to stay ahead in the rapidly evolving tech landscape.
+            </p>
+            <p>
+                Driven by curiosity and a problem-solving mindset, my goal is to create intelligent, scalable products that deliver meaningful value while continuously growing as a software engineer and technology innovator.
+            </p>
+        </div>
+        <div class="about-highlights reveal">
+            <div class="highlight-card">
+                <div class="icon">💡</div>
+                <h4>Problem Solver</h4>
+                <p>I enjoy tackling complex challenges and finding practical, efficient solutions through code, logic, and continuous experimentation.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon">🤖</div>
+                <h4>AI Enthusiast</h4>
+                <p>Passionate about artificial intelligence, prompt engineering, and AI-powered applications. Constantly exploring new tools and technologies.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon">🚀</div>
+                <h4>Project Builder</h4>
+                <p>I learn by building. From web applications to AI-based projects, I focus on creating real-world solutions that strengthen my technical skills.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="icon">📚</div>
+                <h4>Continuous Learner</h4>
+                <p>Technology evolves every day, and so do I. I consistently improve my skills in software development, backend engineering, and modern AI technologies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="section-header">
+        <div>
+            <p class="section-label">My Journey</p>
+            <h2 class="section-title">Experience</h2>
+            <p class="section-headline">Hands-on projects, AI testing, and continuous learning through real-world applications and practical development.</p>
+        </div>
+    </div>
+    <div class="exp-timeline">
+        <div class="exp-card reveal">
+            <div class="exp-meta">
+                <div class="status-badge">📚 Learning</div>
+                <span class="company">AI Testing</span>
+                Independent Testing
+            </div>
+            <div class="exp-body">
+                <h4>AI Tester</h4>
+                <p>Evaluated AI-powered applications across different platforms by testing responses, identifying inconsistencies, reporting issues, and analyzing output quality. Worked with prompts, edge cases, and user experience testing to improve reliability.</p>
+                <div class="exp-tags">
+                    <span>AI Testing</span>
+                    <span>Prompt Engineering</span>
+                    <span>Bug Reporting</span>
+                    <span>Quality Analysis</span>
+                </div>
+            </div>
+        </div>
+        <div class="exp-card reveal">
+            <div class="exp-meta">
+                <div class="status-badge">🟢 Completed</div>
+                <span class="company">College Management System (BMS SaaS)</span>
+                Academic Project
+            </div>
+            <div class="exp-body">
+                <h4>Full Stack Developer</h4>
+                <p>Designed and developed a College/Business Management System as a SaaS-based project. Focused on user management, data handling, responsive interfaces, and practical workflow automation.</p>
+                <div class="exp-tags">
+                    <span>Web Development</span>
+                    <span>SQL</span>
+                    <span>System Design</span>
+                    <span>SaaS Development</span>
+                </div>
+            </div>
+        </div>
+        <div class="exp-card reveal">
+            <div class="exp-meta">
+                <div class="status-badge">🚀 Active</div>
+                <span class="company">Portfolio Development</span>
+                Personal Project
+            </div>
+            <div class="exp-body">
+                <h4>Frontend Developer</h4>
+                <p>Built and continuously improved a modern personal portfolio showcasing projects, skills, and technical expertise. Focused on responsive design, performance, and user experience.</p>
+                <div class="exp-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                </div>
+            </div>
+        </div>
+        <div class="exp-card reveal">
+            <div class="exp-meta">
+                <div class="status-badge">🔬 Exploring</div>
+                <span class="company">Backend Learning &amp; APIs</span>
+                Self Learning
+            </div>
+            <div class="exp-body">
+                <h4>Backend Developer</h4>
+                <p>Exploring backend development using Python and FastAPI. Building APIs, working with databases, and learning scalable application architecture through hands-on projects.</p>
+                <div class="exp-tags">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>SQL</span>
+                    <span>API Development</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECHNICAL SKILLS -->
+<section id="brands">
+    <div class="section-header">
+        <div>
+            <p class="section-label">Expertise</p>
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-headline">Technologies, tools, and skills I use to build software, AI-powered applications, and modern web experiences.</p>
+        </div>
+    </div>
+    <div class="brands-marquee-wrapper reveal">
+        <div class="brands-marquee">
+            <span class="brand-item"><i class="devicon-python-plain colored"></i> Python</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-javascript-plain colored"></i> JavaScript</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-react-original colored"></i> React</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-html5-plain colored"></i> HTML</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-css3-plain colored"></i> CSS</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-sass-original colored"></i> SASS</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-git-plain colored"></i> Git</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-mysql-plain colored"></i> SQL</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-github-original" style="color:var(--text)"></i> GitHub</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-vscode-plain colored"></i> VS Code</span><span class="brand-sep">·</span>
+            <span class="brand-item">🤖 AI Testing</span><span class="brand-sep">·</span>
+            <span class="brand-item">⚡ Prompt Eng.</span><span class="brand-sep">·</span>
+            <span class="brand-item">🧠 DSA</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-c-plain colored"></i> C</span><span class="brand-sep">·</span>
+            <!-- duplicate for seamless loop -->
+            <span class="brand-item"><i class="devicon-python-plain colored"></i> Python</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-javascript-plain colored"></i> JavaScript</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-react-original colored"></i> React</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-html5-plain colored"></i> HTML</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-css3-plain colored"></i> CSS</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-sass-original colored"></i> SASS</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-git-plain colored"></i> Git</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-mysql-plain colored"></i> SQL</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-github-original" style="color:var(--text)"></i> GitHub</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-vscode-plain colored"></i> VS Code</span><span class="brand-sep">·</span>
+            <span class="brand-item">🤖 AI Testing</span><span class="brand-sep">·</span>
+            <span class="brand-item">⚡ Prompt Eng.</span><span class="brand-sep">·</span>
+            <span class="brand-item">🧠 DSA</span><span class="brand-sep">·</span>
+            <span class="brand-item"><i class="devicon-c-plain colored"></i> C</span><span class="brand-sep">·</span>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="section-header">
+        <div>
+            <p class="section-label">Hand-Coded Work</p>
+            <h2 class="section-title">Projects</h2>
+            <p class="section-headline">Real-world projects built from scratch with a focus on clean UI, smooth user experience, and practical functionality</p>
+        </div>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card reveal">
+            <div class="project-info">
+                <h4>BMS (Bank Management System)</h4>
+                <p>A full-stack Bank Management System (college project) built with React, Node.js, Express, and SQLite. It simulates core banking features such as user authentication, account management, fund transfers, transaction tracking, and payment request handling through a modern and responsive interface.</p>
+                <div class="project-tags">
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>SQLite</span>
+                </div>
+                <a href="https://bank-management-system-kappa-three.vercel.app/" target="_blank" class="project-link">View Project →</a>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <div class="project-info">
+                <h4>Cosmic-X</h4>
+                <p>A client-based, multi-page responsive space exploration web platform featuring authentication UI, interactive dashboards, and astronomy-themed pages. Built with HTML, CSS, and JavaScript, it offers a modern, immersive, and visually rich user experience.</p>
+                <div class="project-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+                <a href="https://cosmic-x-rho.vercel.app/" target="_blank" class="project-link">View Project →</a>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <div class="project-info">
+                <h4>TypeFast</h4>
+                <p>A responsive typing speed testing web application designed to measure user performance in real time. It calculates typing speed (WPM/RPM), accuracy percentage, and error rate while providing instant feedback and graphical performance analysis.</p>
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>DOM Manipulation</span>
+                </div>
+                <a href="https://type-fast-tejas.vercel.app/" target="_blank" class="project-link">View Project →</a>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <div class="project-info">
+                <h4>Expense-tracker</h4>
+                <p>A clean and responsive Expense Tracker web app that helps users log, categorize, and monitor their daily spending in real time. Built with Vanilla JavaScript, it features live balance updates, income/expense tracking, and a minimal intuitive UI.</p>
+                <div class="project-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Vanilla JS</span>
+                    <span>UI/UX</span>
+                </div>
+                <a href="https://tejas-et.vercel.app/" target="_blank" class="project-link">View Project →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing">
+    <div class="section-header">
+        <div>
+            <p class="section-label">Open Source</p>
+            <h2 class="section-title">Building Real Projects</h2>
+            <p class="section-headline">I believe the best way to learn technology is by building. Through hands-on projects, I explore web development, artificial intelligence, backend systems, and modern software engineering practices.</p>
+        </div>
+    </div>
+    <div class="writing-card reveal">
+        <div class="writing-content">
+            <div class="writing-platform">
+                <span class="writing-platform-dot"></span>
+                GitHub · Active Development
+            </div>
+            <h3>Project Portfolio &amp; Learning Journey</h3>
+            <p>A collection of projects showcasing my skills in Web Development, AI, FastAPI, Python, SQL, and modern software technologies. Each project reflects my passion for solving problems, learning continuously, and building practical solutions.</p>
+            <div class="writing-tags">
+                <span>Python</span>
+                <span>Web Development</span>
+            </div>
+            <div class="writing-footer">
+                <div class="writing-stats">
+                    <span>10+ Projects</span>
+                    <span>·</span>
+                    <span>Continuous Learning</span>
+                    <span>·</span>
+                    <span>Actively Building</span>
+                </div>
+                <a href="https://github.com/Tejasdevs" target="_blank" class="project-link">View GitHub →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OPEN TO WORK -->
+<section id="open-to-work">
+    <div class="otw-container reveal">
+        <p class="otw-label">Open to Opportunities</p>
+        <h2>Let's build something<br>great together.</h2>
+        <div class="otw-roles">
+            <span class="otw-role">Web Development</span>
+            <span class="otw-role">AI Testing</span>
+            <span class="otw-role">SaaS Development</span>
+            <span class="otw-role">Prompt Engineering</span>
+            <span class="otw-role">AI Engineering</span>
+        </div>
+        <a href="#contact" class="otw-cta">Reach Out →</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="section-header">
+        <div>
+            <p class="section-label">Get in Touch</p>
+            <h2 class="section-title">Contact</h2>
+            <p class="section-headline">Have a role, partnership, or collaboration in mind? I'd love to hear from you.</p>
+        </div>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-info reveal">
+            <h3>Let's connect and create<br>something awesome.</h3>
+            <p>Whether you're interested in web development, AI projects, software solutions, or simply want to connect and discuss technology, I'd love to hear from you.</p>
+            <a href="mailto:chamolatejas1006@gmail.com" class="contact-email">chamolatejas1006@gmail.com</a>
+            <div class="socials-grid" style="margin-top: 2rem;">
+                <a href="https://www.linkedin.com/in/tejas-chamola-948b82336?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link">
+                    <span class="s-icon">in</span>
+                    <div>
+                        <div class="s-name">LinkedIn</div>
+                        <div class="s-handle">@tejas-chamola</div>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/its.tejas1001?igsh=cW9sejRjdmFmMzR3" target="_blank" class="social-link">
+                    <span class="s-icon">📸</span>
+                    <div>
+                        <div class="s-name">Instagram</div>
+                        <div class="s-handle">@its.tejas1001</div>
+                    </div>
+                </a>
+                <a href="https://threads.net/@its.tejas1001" target="_blank" class="social-link">
+                    <span class="s-icon">@</span>
+                    <div>
+                        <div class="s-name">Threads</div>
+                        <div class="s-handle">@its.tejas1001</div>
+                    </div>
+                </a>
+                <a href="https://facebook.com/profile.php?id=61554891783841" target="_blank" class="social-link">
+                    <span class="s-icon">f</span>
+                    <div>
+                        <div class="s-name">Facebook</div>
+                        <div class="s-handle">Tejas Chamola</div>
+                    </div>
+                </a>
+                <a href="https://github.com/Tejasdevs" target="_blank" class="social-link">
+                    <span class="s-icon">⌨</span>
+                    <div>
+                        <div class="s-name">GitHub</div>
+                        <div class="s-handle">@Tejasdevs</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="contact-form-wrapper reveal">
+            <div class="contact-form-card">
+                <h4>Send me a message</h4>
+                <form action="https://formsubmit.co/chamolatejas1006@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Message from Portfolio!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me more..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Send Message →</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© <span id="year"></span> Tejas Chamola. Built with ❤️</p>
+    <a href="#">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
