@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Preview | Tejas Chamola</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { display: flex; flex-direction: column; min-height: 100vh; margin: 0; background: var(--bg); color: var(--text); }
+        .resume-page-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 8rem 2.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            gap: 2rem;
+            box-sizing: border-box;
+        }
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+        .resume-header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-family: 'Playfair Display', serif; /* Assuming this was used for headings */
+        }
+        .resume-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .btn-download {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            opacity: 0.9;
+        }
+        .btn-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .btn-back:hover {
+            color: var(--primary);
+        }
+        .resume-viewer {
+            flex: 1;
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 700px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .resume-viewer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            min-height: 700px;
+        }
+        
+        @media (max-width: 768px) {
+            .resume-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+            .resume-page-container {
+                padding: 6rem 1.5rem 1.5rem;
+            }
+            .resume-actions {
+                width: 100%;
+            }
+            .btn-download {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo" style="text-decoration: none;">Tejas Chamola</a>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <a href="index.html" class="btn-back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span class="back-text">Back to Portfolio</span>
+            </a>
+            <button id="themeToggle" class="nav-toggle" aria-label="Toggle theme" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">
+                ☀
+            </button>
+        </div>
+    </nav>
+
+    <div class="resume-page-container">
+        <div class="resume-header">
+            <div>
+                <h1>Resume</h1>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;">Preview my resume below or download a copy for offline viewing.</p>
+            </div>
+            <div class="resume-actions">
+                <a href="resume.pdf" download class="btn-download">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download PDF
+                </a>
+            </div>
+        </div>
+
+        <div class="resume-viewer">
+            <iframe src="resume.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Resume Preview"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Inline Theme Toggle to avoid script.js errors
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = localStorage.getItem('portfolio_theme') || 'dark';
+        
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.textContent = '🌙';
+        } else {
+            document.body.classList.remove('dark-mode');
+            themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('portfolio_theme', 'dark');
+            } else {
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('portfolio_theme', 'light');
+            }
+        });
+
+        // Navbar scroll effect
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
