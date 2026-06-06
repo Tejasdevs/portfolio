@@ -1,7 +1,7 @@
-// Dynamic year
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Theme toggle
+
 const themeToggle = document.getElementById('themeToggle');
 
 const currentTheme = localStorage.getItem('portfolio_theme') || 'dark';
@@ -24,13 +24,11 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Navbar scroll
 const nav = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Mobile toggle
 const toggle = document.getElementById('navToggle');
 const links = document.getElementById('navLinks');
 toggle.addEventListener('click', () => {
@@ -45,28 +43,27 @@ navAnchors.forEach(a => {
     });
 });
 
-// Scroll reveal
+
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
 }, { threshold: 0.1 });
 reveals.forEach(el => observer.observe(el));
 
-// ---- SCROLL PROGRESS BAR ----
+
 const progressBar = document.getElementById('scroll-progress');
 
-// ---- ACTIVE NAV ON SCROLL ----
 const sections = document.querySelectorAll('section[id]');
 const allNavLinks = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
-    // Progress bar
+    
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
     progressBar.style.width = progress + '%';
 
-    // Active nav highlight
+    
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 120;
@@ -84,7 +81,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ---- DYNAMIC HERO WORD ----
+
 const dynamicWord = document.getElementById('dynamic-word');
 if (dynamicWord) {
     const words = ["creative", "scalable", "modern", "powerful", "AI-driven", "intelligent"];
@@ -100,7 +97,7 @@ if (dynamicWord) {
     }, 2500);
 }
 
-// Page Load Animation
+
 window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.getElementById('loader');

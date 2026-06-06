@@ -373,7 +373,7 @@ section { padding: 6rem 2.5rem; max-width: 1200px; margin: 0 auto; }
     border: 1px solid var(--border); border-radius: 20px;
     background: var(--card-bg); padding: 3rem;
     max-width: 800px;
-    position: relative;
+    position: relative; 
 }
 .testimonial-quote { margin-bottom: 2rem; }
 .quote-icon { margin-bottom: 1rem; display: block; }
