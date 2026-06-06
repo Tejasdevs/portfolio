@@ -181,7 +181,7 @@ nav.scrolled { border-bottom-color: var(--border); padding: 0.9rem 2.5rem; }
     opacity: 0; animation: fadeUp 0.6s ease forwards 0.35s;
 }
 .hero h1 .highlight {
-        background: linear-gradient(90deg, #007BFF, #00D4FF, #0056b3, #007BFF);
+        background: linear-gradient(90deg, #4597ee);
     background-size: 300% 100%;
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
