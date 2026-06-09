@@ -208,13 +208,7 @@ nav.scrolled { border-bottom-color: var(--border); padding: 0.9rem 2.5rem; }
     position: relative;
     padding-bottom: 1.5rem;
 }
-.hero-description::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0;
-    width: 80px; height: 3px;
-    border-radius: 3px;
-    background: linear-gradient(90deg, var(--highlight), #c4a0ff);
-}
+/* Decorative underline removed (.hero-description::after) */
 
 .hero-actions {
     display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
