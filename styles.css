@@ -94,13 +94,16 @@ nav.scrolled { border-bottom-color: var(--border); padding: 0.9rem 2.5rem; }
     position: fixed;
     top: 0; left: 0;
     height: 3px;
-    width: 0%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left center;
+    will-change: transform;
        background: linear-gradient(90deg, #007BFF, #00D4FF, #007BFF);
     background-size: 200% 100%;
     z-index: 10000;
     border-radius: 0 2px 2px 0;
     box-shadow: 0 0 8px rgba(138, 43, 226, 0.7);
-    transition: width 0.1s linear;
+    transition: transform 0.1s linear;
     animation: progressShimmer 2s linear infinite;
 }
 @keyframes progressShimmer {
@@ -114,10 +117,9 @@ nav.scrolled { border-bottom-color: var(--border); padding: 0.9rem 2.5rem; }
     align-items: flex-start;
     gap: 0.4rem;
     margin-top: 2rem;
-    opacity: 0.75;
-    transition: opacity 0.3s;
+    opacity: 1;
 }
-.github-graph-strip:hover { opacity: 1; }
+.github-graph-strip:hover img { opacity: 1; }
 .github-graph-label {
     font-size: 0.72rem;
     font-weight: 500;
@@ -135,6 +137,8 @@ nav.scrolled { border-bottom-color: var(--border); padding: 0.9rem 2.5rem; }
     height: auto;
     border-radius: 8px;
     filter: saturate(1.3);
+    opacity: 0.75;
+    transition: opacity 0.3s;
 }
 
 .nav-cta {
@@ -237,7 +241,7 @@ nav.scrolled { border-bottom-color: var(--border); padding: 0.9rem 2.5rem; }
     display: flex; gap: 3rem;
     opacity: 0; animation: fadeUp 0.6s ease forwards 0.8s;
 }
-.stat h3 {
+.stat-value {
     font-family: var(--font-display); font-size: 2rem; font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -733,7 +737,7 @@ footer a { color: var(--text); text-decoration: none; font-weight: 500; }
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loaderSlideOut 0.6s cubic-bezier(0.86, 0, 0.07, 1) 1.3s forwards;
+    animation: loaderSlideOut 0.6s cubic-bezier(0.86, 0, 0.07, 1) 0.7s forwards;
 }
 
 .loader-text {

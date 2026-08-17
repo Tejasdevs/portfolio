@@ -25,9 +25,6 @@ themeToggle.addEventListener('click', () => {
 });
 
 const nav = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-});
 
 const toggle = document.getElementById('navToggle');
 const links = document.getElementById('navLinks');
@@ -56,14 +53,17 @@ const progressBar = document.getElementById('scroll-progress');
 const sections = document.querySelectorAll('section[id]');
 const allNavLinks = document.querySelectorAll('.nav-links a');
 
-window.addEventListener('scroll', () => {
-    
+let scrollFrameRequested = false;
+let activeSection = '';
+
+const updateScrollState = () => {
+    scrollFrameRequested = false;
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    progressBar.style.width = progress + '%';
+    progressBar.style.transform = `scaleX(${progress / 100})`;
+    nav.classList.toggle('scrolled', scrollTop > 50);
 
-    
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 120;
@@ -72,14 +72,24 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    allNavLinks.forEach(link => {
-        link.classList.remove('nav-active');
-        const href = link.getAttribute('href');
-        if (href === '#' + current) {
-            link.classList.add('nav-active');
-        }
-    });
-});
+    if (current !== activeSection) {
+        activeSection = current;
+        allNavLinks.forEach(link => {
+            link.classList.toggle('nav-active', link.getAttribute('href') === '#' + current);
+        });
+    }
+};
+
+const requestScrollUpdate = () => {
+    if (!scrollFrameRequested) {
+        scrollFrameRequested = true;
+        requestAnimationFrame(updateScrollState);
+    }
+};
+
+window.addEventListener('scroll', requestScrollUpdate, { passive: true });
+window.addEventListener('resize', requestScrollUpdate, { passive: true });
+requestScrollUpdate();
 
 
 const dynamicWord = document.getElementById('dynamic-word');
@@ -98,9 +108,7 @@ if (dynamicWord) {
 }
 
 
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        const loader = document.getElementById('loader');
-        if (loader) loader.remove();
-    }, 2100);
-});
+const loader = document.getElementById('loader');
+if (loader) {
+    loader.addEventListener('animationend', () => loader.remove(), { once: true });
+}
