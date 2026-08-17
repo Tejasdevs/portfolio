@@ -349,7 +349,16 @@ section { padding: 6rem 2.5rem; max-width: 1200px; margin: 0 auto; }
     transition: opacity 0.3s;
     display: inline-flex; align-items: center; gap: 0.5rem;
 }
-.brand-item i { font-size: 1.6rem; line-height: 1; }
+.brand-tech-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    min-width: 1.4rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .brand-logo {
     display: inline-flex;
     width: 1.4rem;
